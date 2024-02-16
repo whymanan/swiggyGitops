@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-          APP_NAME = "swiggy-argocd"
+          APP_NAME = "swiggy-sit"
     }
     stages {
          stage("Cleanup Workspace") {
