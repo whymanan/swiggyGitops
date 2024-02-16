@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: swiggy-sit
+  labels:
+    app: swiggy-sit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: swiggy-sit
+  template:
+    metadata:
+      labels:
+        app: swiggy-sit
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: swiggy-sit
+        image: whymanan/swiggy-sit:6
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 3000
