@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: swiggy-app
-          image: whymanan/swiggy-sit:1.0.0-9
+          image: whymanan/swiggy-sit:1.0.0-8
           resources:
             limits:
               cpu: "1"

@@ -29,7 +29,7 @@ pipeline {
                     git config --global user.name "whymanan"
                     git config --global user.email "whymanan2@gmail.com"
                     git add deployment.yaml
-                    git commit -m "Updated Deployment Manifest"
+                    git commit -m "Updated Deployment Manifest to ${IMAGE_TAG}"
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'githubcred', gitToolName: 'Default')]) {
                     sh "git push https://github.com/whymanan/swiggyGitops main"
