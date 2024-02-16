@@ -15,10 +15,5 @@ spec:
       containers:
         - name: swiggy-app
           image: whymanan/swiggy-sit:1.0.0-9
-          resources:
-            limits:
-              cpu: "1"
-            requests:
-              cpu: "500m"
           ports:
             - containerPort: 3000
